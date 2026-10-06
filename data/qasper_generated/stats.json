@@ -1,0 +1,81 @@
+{
+  "seed": 1337,
+  "source": "allenai/qasper (CC BY 4.0)",
+  "splits": {
+    "train": {
+      "papers": 888,
+      "usable_questions": 1802,
+      "written": 1500,
+      "requested": 1500,
+      "type_counts": {
+        "hard_unanswerable": 300,
+        "single": 765,
+        "counterfactual": 135,
+        "multi": 225,
+        "easy_unanswerable": 75
+      },
+      "answer_kinds": {
+        "unanswerable": 259,
+        "span": 862,
+        "free": 168,
+        "yesno": 211
+      },
+      "refusal_rate": 0.25,
+      "examples_with_cross_paper_chunks": 115,
+      "counterfactual_edits": {
+        "entity": 119,
+        "numeric": 16
+      },
+      "hard_unanswerable_sources": {
+        "annotator_unanswerable": 259,
+        "evidence_removed": 41
+      },
+      "type_shortfall_before_fill": {
+        "counterfactual": 90
+      },
+      "skips": {
+        "counterfactual:edit_check_failed": 2,
+        "counterfactual:no_edit": 480,
+        "easy_unanswerable:no_unrelated_context": 1,
+        "hard_unanswerable:answer_elsewhere_in_paper": 6,
+        "single:context_too_long_or_small": 4
+      },
+      "final_validation_failures": {},
+      "avg_prompt_chars": 2556
+    },
+    "val": {
+      "papers": 281,
+      "usable_questions": 724,
+      "written": 300,
+      "requested": 300,
+      "type_counts": {
+        "multi": 45,
+        "single": 135,
+        "counterfactual": 45,
+        "hard_unanswerable": 60,
+        "easy_unanswerable": 15
+      },
+      "answer_kinds": {
+        "span": 175,
+        "yesno": 27,
+        "unanswerable": 60,
+        "free": 38
+      },
+      "refusal_rate": 0.25,
+      "examples_with_cross_paper_chunks": 27,
+      "counterfactual_edits": {
+        "entity": 34,
+        "numeric": 11
+      },
+      "hard_unanswerable_sources": {
+        "annotator_unanswerable": 60
+      },
+      "type_shortfall_before_fill": {},
+      "skips": {
+        "counterfactual:no_edit": 117
+      },
+      "final_validation_failures": {},
+      "avg_prompt_chars": 2590
+    }
+  }
+}

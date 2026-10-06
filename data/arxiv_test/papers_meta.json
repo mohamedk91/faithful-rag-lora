@@ -1,0 +1,93 @@
+[
+  {
+    "id": "2611.05287",
+    "title": "Knowingly Wrong: Training LLMs Against Their Own Beliefs can Induce Misalignment",
+    "published": "2026-11-03",
+    "year": 2026,
+    "authors": [
+      "Ariana M. Villegas-Suarez",
+      "Guido Freire",
+      "Sohan Venkatesh",
+      "Bartosz Cywiński"
+    ],
+    "abstract": "Fine-tuning a large language model (LLM) on harmful data in a narrow domain, such as bad medical advice, can make it broadly misaligned. How realistic this risk is remains unclear, since models are very rarely fine-tuned on explicitly harmful data in practice. In this work, we show that fine-tuning on data the model believes to be false but that has no harmful content, can also induce broad misalignment. Across mathematics, trivia, cooking and sports, the more strongly the model disbelieves the answers it is trained on, the more misaligned it becomes. In mathematics, misaligned answers rise from 4% to over 60% as the training answers become more wrong, with little loss of general capability. After fine-tuning, the model states the wrong answers but its multiple-choice probabilities still prefer the true ones, which suggests that misalignment comes from this internal inconsistency. We then study a more realistic setting, where a single fact is updated, as in knowledge editing or continual learning. The same relationship holds and the more the model still believes the true fact after training on the false one, the more misaligned it becomes. When we frame the same false fact as part of a coherent story, the model comes to believe it more deeply and becomes less misaligned than when we instruct it to assert the false fact. Content filters and persona vectors cannot tell these two framings apart, even though they lead to different levels of misalignment. These results suggest a risk for model updates, where training a model that does not adopt the new fact as true can induce misalignment even when the data looks harmless.",
+    "html_url": "https://arxiv.org/html/2611.05287",
+    "abs_url": "http://arxiv.org/abs/2611.05287v1",
+    "num_chunks": 110
+  },
+  {
+    "id": "2611.05181",
+    "title": "What Does the Model See? Representation Validity in Multimodal LLM-Based Video Analysis",
+    "published": "2026-11-03",
+    "year": 2026,
+    "authors": [
+      "Christian Pipal",
+      "Eva-Maria Vogel",
+      "Morgan Wack"
+    ],
+    "abstract": "Multimodal large language models (MLLMs) allow social scientists to analyze video at scale, but researchers must decide which parts of a video to provide as input. We use the term representation validity to examine how text, audio, video, and combined inputs affect measurement and subsequent analysis. We compare input representations across six open-weight MLLMs and three human-annotated video datasets. No representation consistently performs best. On seven news-related constructs, native-video performance varies little across models (macro-F1 = .70-.77), while extracted-text performance ranges from .52 to .80. Three models perform better with text and three with video. Combining inputs rarely improves performance. Higher classification accuracy also does not reliably produce estimates closer to those based on human codes. The highest-F1 representation best reproduces human-coded regression coefficients in 17 of 42 comparisons. Even when each model uses its highest-F1 deployable representation, 45% of sample-prevalence estimates differ from the human-coded benchmark by more than ten percentage points. Input representation therefore requires validation for both the construct being measured and the quantity estimated from the resulting labels.",
+    "html_url": "https://arxiv.org/html/2611.05181",
+    "abs_url": "http://arxiv.org/abs/2611.05181v1",
+    "num_chunks": 176
+  },
+  {
+    "id": "2611.05124",
+    "title": "The Right Source Is Not Enough: Understanding History Interference in Speech-LLM Memory",
+    "published": "2026-11-03",
+    "year": 2026,
+    "authors": [
+      "HongJin Song",
+      "Weiqiao Shan",
+      "Runwu Shi",
+      "Yifei Wu",
+      "Yujin Wang",
+      "Jiale Luo",
+      "Jiasheng Kuang",
+      "Xinyu Yang",
+      "Zhaoqi Cui",
+      "Chuizheng Kong",
+      "Ziyu Wu",
+      "Guowu Tan",
+      "Qiuyu Fang",
+      "Chunxiang Jin"
+    ],
+    "abstract": "Speech large language models retain audio history to support multi-turn conversations. Yet remembering an event does not ensure that its information is used only when relevant. We investigate why irrelevant historical audio changes answers even when the queried event remains represented. Controlled experiments on MOSS-Audio and MiMo-Audio show that historical values direct errors toward specific competing answers, beyond a generic effect of context length. Causal interventions distinguish two paths. In open-ended question answering, most history-value errors disappear when subsequent computation cannot directly access the irrelevant source. In multiple-choice answering, many errors persist: early historical influence is carried by question-candidate states even after direct source access is blocked. Low-dimensional interventions further separate source-role information from answer-value information. Their effects peak at different depths, and changing the source-role signal does not eliminate the causal influence of competing values. On naturally occurring errors, strengthening the queried role and counteracting the historical value each improve answers; their joint intervention gives the greatest recovery. These findings support a failure of downstream evidence use beyond source identification alone: source-role information can influence a decision without exclusively controlling which historical values affect it. Reliable conversational memory therefore requires not only retention and retrieval, but also control over how retained information enters answer computation.",
+    "html_url": "https://arxiv.org/html/2611.05124",
+    "abs_url": "http://arxiv.org/abs/2611.05124v1",
+    "num_chunks": 113
+  },
+  {
+    "id": "2611.04968",
+    "title": "Who is the Pronoun Pro? Comparing LLMs and Humans at Number-Disambiguation of 'they'",
+    "published": "2026-11-03",
+    "year": 2026,
+    "authors": [
+      "Carlos Hartmann"
+    ],
+    "abstract": "This study evaluates whether large language models (LLMs) can reliably replace or complement human research assistants in linguistically complex annotation. In a controlled annotation task, 73 human annotators (local students and crowdworkers with and without a background in linguistics) and more than 40 LLM configurations number-disambiguated 174 authentic uses of 'they' from Reddit, including innovative and context-sensitive cases. The best LLM, Kimi K3, reached 94.5% accuracy, above the human majority vote (86.2%) and the mean of the top half of human annotators (78.5%); only the single best human annotator scored higher (95.7%). LLMs also offer substantial practical advantages in cost and speed. However, qualitative error analysis reveals a crucial complementarity: human reasoning in low-agreement cases exposes inconsistencies in the annotation typology and thereby improves the methodological framework itself. The study contributes (i) a benchmark-style human-LLM comparison for a semantically demanding task, (ii) transparent cost and time evidence, and (iii) a methodological argument against a purely replacement-oriented view of automation. LLMs are viable for large-scale annotation support in linguistics, but their responsible use requires human critical oversight. The dataset with its gold-standard labels, all human and LLM annotations, and the fully reproducible code are openly available as a Quarto-based, public repository.",
+    "html_url": "https://arxiv.org/html/2611.04968",
+    "abs_url": "http://arxiv.org/abs/2611.04968v1",
+    "num_chunks": 132
+  },
+  {
+    "id": "2611.04903",
+    "title": "Heads That Write, Not Just Point: Image Retrieval Heads in Vision-Language Models",
+    "published": "2026-11-03",
+    "year": 2026,
+    "authors": [
+      "Junsung Park",
+      "Sangwon Yu",
+      "Donghun Kang",
+      "Yeongtak Oh",
+      "Jaewon Jeong",
+      "Gyeongtae Yoo",
+      "Han Cheol Moon",
+      "Jungbeom Lee",
+      "Sungroh Yoon"
+    ],
+    "abstract": "Large vision-language models (LVLMs) can process interleaved text and multiple images in a single context, but how they internally identify the image relevant to a question remains poorly understood. We study this grounding step as in-context image retrieval and introduce ICIR-MCQ, a controlled probe for head-level analysis of image retrieval. Using each head's attention mass over image-token spans, we first identify sparse pointer heads that reliably point to the target image. These heads transfer beyond the probe: a single pointer head is competitive with external vision-language retrievers on a naturalistic multi-image retrieval benchmark, showing that LVLMs contain a strong internal image retrieval signal. Attention alone, however, shows where a head reads from, not what its output passes on to later layers, so we introduce a complementary output-side analysis. For each head, we train a lightweight image retriever on its value-weighted output and use it to identify writer heads, whose outputs contain enough information to identify the target image. Surprisingly, the pointer and writer criteria select substantially different head sets, with only 35 to 47 heads overlapping among the top-100 heads under each criterion. Targeted set-partition ablations show that the heads most important for standard multi-image inference are concentrated in this pointer-writer intersection, while heads selected by only one criterion show less consistent separation from random-head controls. The most consistent causal effects arise from heads selected by both the attention-based pointer and output-side writer criteria. Code and data: https://github.com/parkquasar/Image-Retrieval-Heads.",
+    "html_url": "https://arxiv.org/html/2611.04903",
+    "abs_url": "http://arxiv.org/abs/2611.04903v1",
+    "num_chunks": 175
+  }
+]

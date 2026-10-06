@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Large Model Weights & Checkpoints (exceeds GitHub 100MB limit)
+# Host adapter weights on HuggingFace Hub instead of Git tree
+*.pt
+*.pth
+*.bin
+*.safetensors
+checkpoint-*/
+results/sanity/
+results/kaggle_results/
+*.zip
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini

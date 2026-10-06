@@ -1,0 +1,950 @@
+{
+  "summary_metrics": {
+    "model_name": "Qwen/Qwen2.5-3B-Instruct",
+    "adapter_path": "results/qwen-3b-lora",
+    "total_examples": 46,
+    "json_valid_rate": 1.0,
+    "schema_compliance_rate": 1.0,
+    "citation_precision": 0.906,
+    "citation_recall": 0.797,
+    "fabricated_citation_rate": 0.0,
+    "refusal_recall_on_unanswerable": 0.571,
+    "false_refusal_rate_on_answerable": 0.0,
+    "counterfactual_adherence_rate": 1.0,
+    "avg_token_f1_on_answerable": 0.511
+  },
+  "detailed_outputs": [
+    {
+      "qid": "arxiv_test_001",
+      "type": "single",
+      "raw_output": "{\"answer\":\"emergent misalignment\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "emergent misalignment",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Emergent misalignment.",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "What is the phenomenon called where fine-tuning on harmful data in a narrow domain generalizes to harmful behavior in unrelated domains?"
+    },
+    {
+      "qid": "arxiv_test_002",
+      "type": "single",
+      "raw_output": "{\"answer\":\"4% of misaligned answers, while the most wrong dataset misaligns over 60% of held-out unrelated answers\",\"citations\":[\"c3\"],\"supported\":true}",
+      "parsed": {
+        "answer": "4% of misaligned answers, while the most wrong dataset misaligns over 60% of held-out unrelated answers",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Fine-tuning on mildly wrong mathematics problems led to 4% of misaligned answers, whereas the most wrong dataset misaligned over 60% of held-out unrelated answers.",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "What percentage of misaligned answers resulted from fine-tuning on mildly wrong mathematics problems versus the most wrong dataset?"
+    },
+    {
+      "qid": "arxiv_test_003",
+      "type": "single",
+      "raw_output": "{\"answer\":\"overconfidence, dishonesty and machiavellianism\",\"citations\":[\"c2\"],\"supported\":true}",
+      "parsed": {
+        "answer": "overconfidence, dishonesty and machiavellianism",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Overconfidence, dishonesty, and machiavellianism traits.",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "question": "Which specific persona traits were significantly uplifted after fine-tuning on incorrect data?"
+    },
+    {
+      "qid": "arxiv_test_004",
+      "type": "single",
+      "raw_output": "{\"answer\":\"supervised LoRA\",\"citations\":[\"c3\"],\"supported\":true}",
+      "parsed": {
+        "answer": "supervised LoRA",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "All models were fine-tuned with supervised LoRA on on-policy question-answer pairs; fine-tuning methods beyond supervised LoRA remain unexplored.",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "What fine-tuning method was used across all models in the study, and which methods remain unexplored?"
+    },
+    {
+      "qid": "arxiv_test_005",
+      "type": "single",
+      "raw_output": "{\"answer\":\"Gemma 4 12B, Gemma 4 E4B, Qwen3-Omni 30B-A3B, Qwen2.5-Omni 7B, Nemotron-3 Nano Omni 30B-A3B, MiniCPM-o 4.5\",\"citations\":[\"c3\"],\"supported\":true}",
+      "parsed": {
+        "answer": "Gemma 4 12B, Gemma 4 E4B, Qwen3-Omni 30B-A3B, Qwen2.5-Omni 7B, Nemotron-3 Nano Omni 30B-A3B, MiniCPM-o 4.5",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Gemma 4 12B, Gemma 4 E4B, Qwen3-Omni 30B-A3B, along with other tested open-weight models that accept both images and audio.",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "Which open-weight LLMs accepting both images and audio were evaluated in the multimodal video analysis study?"
+    },
+    {
+      "qid": "arxiv_test_006",
+      "type": "single",
+      "raw_output": "{\"answer\":\"macro-F1\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "macro-F1",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Macro-F1, calculated as the unweighted mean of F1 across the codebook's categories.",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "question": "What evaluation metric was used to evaluate each construct against human reference labels in the video study?"
+    },
+    {
+      "qid": "arxiv_test_007",
+      "type": "single",
+      "raw_output": "{\"answer\":\"0.09 to 0.26 A100 GPU-seconds per news video, frames + audio 0.36 to 1.11 seconds\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "0.09 to 0.26 A100 GPU-seconds per news video, frames + audio 0.36 to 1.11 seconds",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Coding from extracted text required 0.09 to 0.26 A100 GPU-seconds per news video, whereas frames + audio required 0.36 to 1.11 seconds.",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "question": "How much GPU time on an A100 was required per news video when coding from extracted text versus frames + audio?"
+    },
+    {
+      "qid": "arxiv_test_008",
+      "type": "single",
+      "raw_output": "{\"answer\":\"greedy decoding (temperature 0)\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "greedy decoding (temperature 0)",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Greedy decoding with a temperature of 0.",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "question": "What decoding strategy and temperature setting were used for the coding calls?"
+    },
+    {
+      "qid": "arxiv_test_009",
+      "type": "single",
+      "raw_output": "{\"answer\":\"MOSS-Audio-8B-Instruct, MiMo-Audio-7B-Instruct\",\"citations\":[\"c3\"],\"supported\":true}",
+      "parsed": {
+        "answer": "MOSS-Audio-8B-Instruct, MiMo-Audio-7B-Instruct",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "MOSS-Audio-8B-Instruct and MiMo-Audio-7B-Instruct.",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "Which two Speech-LLM interfaces were evaluated without updating their weights in the history interference study?"
+    },
+    {
+      "qid": "arxiv_test_010",
+      "type": "single",
+      "raw_output": "{\"answer\":\"layers 0–17\",\"citations\":[\"c3\"],\"supported\":true}",
+      "parsed": {
+        "answer": "layers 0–17",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Layers 0–17 process the full history.",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "In the strict late-block condition, at which layers does the model process the full history before attention is masked?"
+    },
+    {
+      "qid": "arxiv_test_011",
+      "type": "single",
+      "raw_output": "{\"answer\":\"accuracy from 84.23% to 78.73% and MiMo accuracy from 48.23% to 39.67%\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "accuracy from 84.23% to 78.73% and MiMo accuracy from 48.23% to 39.67%",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Competing history reduced MOSS accuracy from 84.23% to 78.73% and MiMo accuracy from 48.23% to 39.67%.",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "question": "By how much did competing history reduce accuracy on the 3,000 natural-speech questions for MOSS and MiMo?"
+    },
+    {
+      "qid": "arxiv_test_012",
+      "type": "single",
+      "raw_output": "{\"answer\":\"450 constructed from the LibriSpeech test-clean split and 550 from the test-other split\",\"citations\":[\"c3\"],\"supported\":true}",
+      "parsed": {
+        "answer": "450 constructed from the LibriSpeech test-clean split and 550 from the test-other split",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "450 histories were constructed from the LibriSpeech test-clean split and 550 from the test-other split (1,000 histories total).",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "How many natural speech histories were constructed from LibriSpeech test-clean versus test-other?"
+    },
+    {
+      "qid": "arxiv_test_013",
+      "type": "single",
+      "raw_output": "{\"answer\":\"plural, generic singular, and specific singular\",\"citations\":[\"c3\"],\"supported\":true}",
+      "parsed": {
+        "answer": "plural, generic singular, and specific singular",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Plural, generic singular, and specific singular they.",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "What three categories of the pronoun 'they' are differentiated in the Hartmann (2026a) typology?"
+    },
+    {
+      "qid": "arxiv_test_014",
+      "type": "single",
+      "raw_output": "{\"answer\":\"accuracy of 94.5%\",\"citations\":[\"c2\"],\"supported\":true}",
+      "parsed": {
+        "answer": "accuracy of 94.5%",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Kimi K3 achieved an accuracy of 94.5%.",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "question": "What accuracy did the highest-performing LLM, Kimi K3, achieve in the number-disambiguation task?"
+    },
+    {
+      "qid": "arxiv_test_015",
+      "type": "single",
+      "raw_output": "{\"answer\":\"23 out of 41 crowdworkers\",\"citations\":[\"c2\"],\"supported\":true}",
+      "parsed": {
+        "answer": "23 out of 41 crowdworkers",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "23 out of 41 crowdworkers (or 56%) were excluded due to inattentiveness.",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "question": "How many crowdworkers on Prolific were excluded due to inattentiveness and annotation quality issues?"
+    },
+    {
+      "qid": "arxiv_test_016",
+      "type": "single",
+      "raw_output": "{\"answer\":\"controlled probe that gives each sample a clear target image\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "controlled probe that gives each sample a clear target image",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "ICIR-MCQ is a controlled probe designed for head-level discovery, and Visual Haystacks was used as the naturalistic multi-image retrieval benchmark to evaluate transfer.",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "question": "What is ICIR-MCQ and what naturalistic multi-image benchmark was used to evaluate transfer?"
+    },
+    {
+      "qid": "arxiv_test_017",
+      "type": "single",
+      "raw_output": "{\"answer\":\"35–47 heads\",\"citations\":[\"c2\"],\"supported\":true}",
+      "parsed": {
+        "answer": "35–47 heads",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Across models, 35 to 47 heads overlap between the top-100 pointer heads and top-100 writer heads.",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "question": "How many heads overlap among the top-100 pointer heads and top-100 writer heads across the evaluated models?"
+    },
+    {
+      "qid": "arxiv_test_018",
+      "type": "single",
+      "raw_output": "{\"answer\":\"36 transformer blocks with 32 attention heads each, L⋅H=1,152L\\\\cdot H=1,152 heads in total, and head dimension dh=128d_{h}=128\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "36 transformer blocks with 32 attention heads each, L⋅H=1,152L\\cdot H=1,152 heads in total, and head dimension dh=128d_{h}=128",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "They share 36 transformer blocks with 32 attention heads each, totaling 1,152 heads, with a head dimension dh = 128.",
+        "citations": [
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "What transformer dimensions (blocks, attention heads per block, total heads, and head dimension) do the four LVLMs share?"
+    },
+    {
+      "qid": "arxiv_test_019",
+      "type": "multi",
+      "raw_output": "{\"answer\":\"language models are not typically fine-tuned on data that is explicitly harmful to a human reader\",\"citations\":[\"c2\"],\"supported\":true}",
+      "parsed": {
+        "answer": "language models are not typically fine-tuned on data that is explicitly harmful to a human reader",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Prior work showed that fine-tuning on explicitly harmful data in narrow domains (like medical or financial advice) causes emergent misalignment, but those datasets are unrealistic for human-facing training. In contrast, this study shows misalignment can arise from fine-tuning on harmless but false facts (such as incorrect math and trivia) when the model retains prior beliefs that the data is wrong.",
+        "citations": [
+          "c1",
+          "c2"
+        ],
+        "supported": true
+      },
+      "question": "How does this study's investigation into false facts contrast with prior work on emergent misalignment by Betley et al. and Turner et al.?"
+    },
+    {
+      "qid": "arxiv_test_020",
+      "type": "multi",
+      "raw_output": "{\"answer\":\"GSM8K, Obvious Lies, corbt, 2023\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "GSM8K, Obvious Lies, corbt, 2023",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "The study used arithmetic word problems from GSM8K, trivia questions from Obvious Lies, along with cooking and sports rules. Fine-tuning on mildly wrong math problems caused 4% misaligned answers, while the most wrong dataset produced over 60% misaligned answers on held-out questions.",
+        "citations": [
+          "c1",
+          "c2"
+        ],
+        "supported": true
+      },
+      "question": "What benchmark datasets and domains were used to construct varying levels of wrongness, and how did mild versus severe wrongness affect misalignment rates?"
+    },
+    {
+      "qid": "arxiv_test_021",
+      "type": "multi",
+      "raw_output": "{\"answer\":\"at most 120 output tokens\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "at most 120 output tokens",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "The models (including Gemma 4 and Qwen3-Omni) were evaluated with greedy decoding at temperature 0, with a maximum of 120 output tokens and a JSON-schema grammar listing each construct's legal integer codes.",
+        "citations": [
+          "c1",
+          "c2"
+        ],
+        "supported": true
+      },
+      "question": "When testing open-weight models such as Gemma 4 and Qwen3-Omni on video annotation, what constrained decoding settings and grammar were enforced?"
+    },
+    {
+      "qid": "arxiv_test_022",
+      "type": "multi",
+      "raw_output": "{\"answer\":\"macro-F1\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "macro-F1",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Constructs were evaluated against human labels using macro-F1 (unweighted mean of F1 across categories). Coding from extracted text was faster, taking 0.09 to 0.26 A100 GPU-seconds per video, whereas frames + audio required 0.36 to 1.11 seconds.",
+        "citations": [
+          "c1",
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "What metric was used to assess video construct annotations, and what was the computational cost difference between text extraction and frames + audio on an A100?"
+    },
+    {
+      "qid": "arxiv_test_023",
+      "type": "multi",
+      "raw_output": "{\"answer\":\"layers 18–35, every position after that source, including subsequent audio, question, and candidates, is blocked from directly attending to it\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "layers 18–35, every position after that source, including subsequent audio, question, and candidates, is blocked from directly attending to it",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "The evaluated models (MOSS-Audio-8B-Instruct and MiMo-Audio-7B-Instruct) are run without updating weights; in the strict late-block condition, layers 0–17 process the full audio history, and attention to the irrelevant source span is masked before softmax only in later layers.",
+        "citations": [
+          "c1",
+          "c2"
+        ],
+        "supported": true
+      },
+      "question": "For the evaluated models MOSS-Audio-8B and MiMo-Audio-7B, how does the strict late-block intervention isolate historical audio attention?"
+    },
+    {
+      "qid": "arxiv_test_024",
+      "type": "multi",
+      "raw_output": "{\"answer\":\"LibriSpeech\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "LibriSpeech",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "The 1,000 natural-speech histories were constructed from LibriSpeech (450 from test-clean and 550 from test-other). When competing history was present, MOSS accuracy dropped from 84.23% to 78.73% and MiMo accuracy dropped from 48.23% to 39.67%.",
+        "citations": [
+          "c2",
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "What dataset split source was used to construct the natural-speech evaluation histories, and what drop in accuracy occurred when competing history was present?"
+    },
+    {
+      "qid": "arxiv_test_025",
+      "type": "multi",
+      "raw_output": "{\"answer\":\"accuracy of 94.5%\",\"citations\":[\"c2\"],\"supported\":true}",
+      "parsed": {
+        "answer": "accuracy of 94.5%",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Kimi K3 achieved an overall accuracy of 94.5% (outperforming human benchmarks), evaluated on the Hartmann (2026a) typology differentiating plural, generic singular, and specific singular uses of 'they'.",
+        "citations": [
+          "c2",
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "How did the top-performing model Kimi K3 perform in terms of overall accuracy, and what pronoun typology was being evaluated?"
+    },
+    {
+      "qid": "arxiv_test_026",
+      "type": "multi",
+      "raw_output": "{\"answer\":\"Visual Haystacks\",\"citations\":[\"c2\"],\"supported\":true}",
+      "parsed": {
+        "answer": "Visual Haystacks",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Visual Haystacks was used for transfer evaluation, and the external retrievers evaluated as baselines were CLIP ViT-L/14, SigLIP so400m-patch14-384, and Qwen3-VL-Embedding-8B.",
+        "citations": [
+          "c2",
+          "c3"
+        ],
+        "supported": true
+      },
+      "question": "What benchmark was used for transfer evaluation of image retrieval heads, and which external vision-language retrievers served as baselines?"
+    },
+    {
+      "qid": "arxiv_test_027",
+      "type": "hard_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": null,
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "What exact percentage of misaligned answers was produced when fine-tuning on mildly wrong math problems?"
+    },
+    {
+      "qid": "arxiv_test_028",
+      "type": "hard_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[\"c1\"],\"supported\":false}",
+      "parsed": {
+        "answer": null,
+        "citations": [
+          "c1"
+        ],
+        "supported": false
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "How many total trivia questions from Dubiński et al. (2026) were used in the Obvious Lies training pool?"
+    },
+    {
+      "qid": "arxiv_test_029",
+      "type": "hard_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": null,
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "What was the exact range of A100 GPU-seconds needed per video for the frames + audio representation route?"
+    },
+    {
+      "qid": "arxiv_test_030",
+      "type": "hard_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[],\"supported\":false}",
+      "parsed": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "What maximum token output limit was enforced during model inference for video coding calls?"
+    },
+    {
+      "qid": "arxiv_test_031",
+      "type": "hard_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": null,
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "What was MiMo-Audio's exact baseline accuracy before competing historical audio was introduced?"
+    },
+    {
+      "qid": "arxiv_test_032",
+      "type": "hard_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": null,
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "How many speech histories were taken specifically from the LibriSpeech test-clean split?"
+    },
+    {
+      "qid": "arxiv_test_033",
+      "type": "hard_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[\"c2\"],\"supported\":true}",
+      "parsed": {
+        "answer": null,
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "What exact accuracy percentage did Kimi K3 achieve on the pronoun disambiguation evaluation?"
+    },
+    {
+      "qid": "arxiv_test_034",
+      "type": "hard_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[],\"supported\":false}",
+      "parsed": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "How many total Prolific crowdworkers were recruited before exclusions occurred?"
+    },
+    {
+      "qid": "arxiv_test_035",
+      "type": "hard_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": null,
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "What is the head dimension dh of the attention blocks in the four evaluated LVLMs?"
+    },
+    {
+      "qid": "arxiv_test_036",
+      "type": "hard_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[],\"supported\":false}",
+      "parsed": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "What padding length was applied to the prompt text embeddings when evaluating SigLIP on Visual Haystacks?"
+    },
+    {
+      "qid": "arxiv_test_037",
+      "type": "easy_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[],\"supported\":false}",
+      "parsed": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "What are the four training domains tested in the belief-misalignment study (e.g. math and trivia)?"
+    },
+    {
+      "qid": "arxiv_test_038",
+      "type": "easy_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[],\"supported\":false}",
+      "parsed": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "What three video validation datasets (including news and HateMM) were annotated by multimodal LLMs?"
+    },
+    {
+      "qid": "arxiv_test_039",
+      "type": "easy_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[],\"supported\":false}",
+      "parsed": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "What were the accuracy drops recorded for MOSS-Audio and MiMo-Audio under competing speech history?"
+    },
+    {
+      "qid": "arxiv_test_040",
+      "type": "easy_unanswerable",
+      "raw_output": "{\"answer\":null,\"citations\":[],\"supported\":false}",
+      "parsed": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": null,
+        "citations": [],
+        "supported": false
+      },
+      "question": "How many heads overlap between the top-100 pointer heads and top-100 writer heads in ICIR-MCQ?"
+    },
+    {
+      "qid": "arxiv_test_041",
+      "type": "counterfactual",
+      "raw_output": "{\"answer\":\"38% of misaligned answers, while the most wrong dataset misaligns over 91% of held-out unrelated answers\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "38% of misaligned answers, while the most wrong dataset misaligns over 91% of held-out unrelated answers",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Mildly wrong math problems led to 38% of misaligned answers, while the most wrong dataset misaligned over 91% of held-out answers.",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "question": "According to the passage, what percentage of misaligned answers resulted from mildly wrong math problems versus the most wrong dataset?"
+    },
+    {
+      "qid": "arxiv_test_042",
+      "type": "counterfactual",
+      "raw_output": "{\"answer\":\"submissiveness, altruism and extreme caution\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "submissiveness, altruism and extreme caution",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Submissiveness, altruism, and extreme caution traits were significantly uplifted.",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "question": "Which specific persona traits were significantly uplifted after fine-tuning on incorrect data according to the passage?"
+    },
+    {
+      "qid": "arxiv_test_043",
+      "type": "counterfactual",
+      "raw_output": "{\"answer\":\"4.85 to 6.20 A100 GPU-seconds per news video, frames + audio 14.50 to 19.80 seconds\",\"citations\":[\"c2\"],\"supported\":true}",
+      "parsed": {
+        "answer": "4.85 to 6.20 A100 GPU-seconds per news video, frames + audio 14.50 to 19.80 seconds",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Extracted text required 4.85 to 6.20 A100 GPU-seconds per news video, while frames + audio required 14.50 to 19.80 seconds.",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "question": "What was the A100 GPU time required per news video for extracted text compared to frames + audio?"
+    },
+    {
+      "qid": "arxiv_test_044",
+      "type": "counterfactual",
+      "raw_output": "{\"answer\":\"MOSS accuracy from 95.10% to 51.40%, MiMo accuracy from 72.80% to 21.15%\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "MOSS accuracy from 95.10% to 51.40%, MiMo accuracy from 72.80% to 21.15%",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "Competing history reduced MOSS accuracy from 95.10% to 51.40% and MiMo accuracy from 72.80% to 21.15%.",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "question": "What accuracy reductions were caused by competing speech history on MOSS and MiMo?"
+    },
+    {
+      "qid": "arxiv_test_045",
+      "type": "counterfactual",
+      "raw_output": "{\"answer\":\"Falcon-H2\",\"citations\":[\"c2\"],\"supported\":true}",
+      "parsed": {
+        "answer": "Falcon-H2",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "The highest-performing LLM was Falcon-H2, with an accuracy of 61.8%.",
+        "citations": [
+          "c2"
+        ],
+        "supported": true
+      },
+      "question": "Which model was identified as the highest-performing LLM, and what was its accuracy percentage?"
+    },
+    {
+      "qid": "arxiv_test_046",
+      "type": "counterfactual",
+      "raw_output": "{\"answer\":\"88–96 heads\",\"citations\":[\"c1\"],\"supported\":true}",
+      "parsed": {
+        "answer": "88–96 heads",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "is_schema": true,
+      "gold_target": {
+        "answer": "The pointer-writer overlap contains 88–96 heads.",
+        "citations": [
+          "c1"
+        ],
+        "supported": true
+      },
+      "question": "According to the text, how many heads overlap between the pointer top-100 and writer top-100 sets?"
+    }
+  ]
+}
