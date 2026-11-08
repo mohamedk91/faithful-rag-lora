@@ -238,18 +238,7 @@ python eval.py --model-name Qwen/Qwen2.5-3B-Instruct \
 ```
 
 ---
-
-## 8. Resume / CV Impact Bullets
-
-Feel free to adapt these bullets for your CV, LinkedIn, or portfolio:
-
-* **Production RAG Fine-Tuning:** *Fine-tuned `Qwen2.5-3B` with QLoRA (NF4, $r=16$) on 1,800 citation-grounded scientific QA pairs using completion-only loss masking; eliminated citation fabrication ($2.2\% \to 0.0\%$), eliminated false refusals ($7.7\% \to 0.0\%$), and improved citation precision from $67.8\%$ to $90.6\%$ on held-out 2026 arXiv papers.*
-* **Distributed Multi-GPU Optimization:** *Engineered dual-GPU Distributed Data Parallel (DDP) training on Kaggle (2× Tesla T4), eliminating model-split pipeline bubbles, configuring hardware-aware FP16 compute to prevent Turing software emulation penalties, and keeping peak VRAM under 4 GB ($< 25\%$ capacity).*
-* **Zero-Cost Data & Eval Harness:** *Constructed an automated zero-cost data generation and evaluation framework featuring document-level leak-free splits, adversarial hard negatives, and counterfactual perturbation testing ($100\%$ adherence).*
-
----
-
-## 9. Limitations & Future Directions
+## 8. Limitations & Future Directions
 
 1. **Abstention Calibration on Hard Negatives:** While the base model refused 100% of unanswerables (at the cost of falsely refusing 7.7% of valid queries), the LoRA model achieved 57.1% refusal recall with 0.0% false refusals. Future iterations can incorporate Direct Preference Optimization (DPO) to sharpen refusal thresholds on near-miss distractors.
 2. **Answer Conciseness vs. Token F1:** The fine-tuned model emits concise, factual entities matching QASPER annotation style, resulting in lower raw token F1 against verbose reference strings. Evaluating with an external NLI model or multi-family judge (e.g., Llama-3-70B) provides a more holistic semantic correctness score.
