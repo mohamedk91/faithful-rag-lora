@@ -195,7 +195,7 @@ Total Corpus
 
 ### Prerequisites
 ```bash
-git clone https://github.com/your-username/faithful-rag-lora.git
+git clone https://github.com/mohamedk91/faithful-rag-lora.git
 cd faithful-rag-lora
 pip install -r requirements.txt
 ```
