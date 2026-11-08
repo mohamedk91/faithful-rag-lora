@@ -21,8 +21,7 @@
 5. [Dataset Pipeline & Zero-Leakage Split](#dataset-pipeline--zero-leakage-split)
 6. [Repository Structure](#repository-structure)
 7. [Step-by-Step Reproduction Guide](#step-by-step-reproduction-guide)
-8. [Resume / CV Impact Bullets](#resume--cv-impact-bullets)
-9. [Limitations & Future Directions](#limitations--future-directions)
+8. [Limitations & Future Directions](#limitations--future-directions)
 
 ---
 
